@@ -151,44 +151,51 @@ void dayindicator(int Dayx, int Monthx, int Yearx)//indicate the given date. DAy
         else if(gaussEaster(day+2,Monthx,Yearx) && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x02);//color foreground as green and background black. public holiday. Good Friday.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0x0F);//color foreground as black and background white.
+            printf(" ");
         }
         else if(gaussAscension(day,Monthx,Yearx) && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x02);//color foreground as green and background black.public holiday. Ascension day.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(gaussWhitMonday(day,Monthx,Yearx) && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x02);//color foreground as green and background black.public holiday. Whit Monday.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(gaussEaster(day-1,Monthx,Yearx) && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x02);//color foreground as green and background black.public holiday.ester Monday.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(allholidaysinFrance(day,Monthx) && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x02);//color foreground as green and background black. all public holiday with a fixed date.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(weekDay==0 && day==Dayx||weekDay==6 && day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x04);//color foreground as red and background black.Weekend are color red.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(day==Dayx)
         {
             SetConsoleTextAttribute(hc, 0x0F);//color foreground as white and background black.
-            printf("%2d ",day);
+            printf("%2d",day);
             SetConsoleTextAttribute(hc, 0xF0);//color foreground as black and background white.
+            printf(" ");
         }
         else if(gaussEaster(day,Monthx,Yearx))
         {
